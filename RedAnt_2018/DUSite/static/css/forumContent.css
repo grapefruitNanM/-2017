@@ -1,0 +1,62 @@
+h5{
+	font-size: 20px;
+	display: block;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: auto;
+    margin-top: auto;
+	margin-top: 30px;
+	color: rgb(104, 110, 111);
+}
+p{
+	font-size: 18px;
+}
+.wrapper{
+	margin: 20px 40px;
+	box-shadow:0 0 2px 2px rgba(155,155,155,0.1);
+}
+.essay{
+	width: 90%;
+	margin:auto;
+	padding: 5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	height: -webkit-fit-content;
+	height:-o-fit-content ;
+	height: fit-content ;
+	height: -moz-fit-content;
+	box-shadow:0 0 2px 2px rgba(155,155,155,0.1);
+}
+.article>p{
+	font-size: 18px;
+}
+.fold{
+	display: none;
+}
+.foldbutton{
+    margin: auto;
+    border: 0;
+    background: inherit;
+    font-size: 20px;
+    color: #26abe2;
+}
+#timeline > li> div.cbp_tmlabel{
+	height: 5rem;
+}
+#article{
+	line-height: 150%;
+	height: 80px;
+}
+
+body > div.wrapper > section > div > div.essay >div>.time{
+	float: right;
+    color: #aba8a8;
+}
+body > div.wrapper > section > div > div.essay >div> .name{
+    color: #aba8a8;
+}
+body > div.wrapper > section > div> div > div> img{
+	height: 6rem;
+	width: 6rem;
+	border-radius: 50%;
+}

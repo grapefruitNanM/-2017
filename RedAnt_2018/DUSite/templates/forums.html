@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>发帖</title>
+
+<link rel="alternate" type="application/rss+xml" title="" href="/index/">
+<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet" type="text/css">
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+<link rel="stylesheet" type="text/css" href="/static/css/forum.css">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+
+<link rel="stylesheet" href="/static/css/essaystyle.css">
+
+<link rel="stylesheet" href="/static/css/projectTeamIndex.css">
+
+<link rel="stylesheet" href="/static/css/animate.css">
+
+<link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+<link rel="stylesheet" href="/static/css/jquery.tiles.css">
+<link rel="stylesheet" href="/static/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+<script src="/static/js/jquery.tiles.js"></script>
+<script src="/static/js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+</head>
+<body>
+
+{% include 'topBar.html' %}
+
+<div class="wrapper">
+<section>
+  <div class="container">
+    <div style="text-align: center;">
+      {{ form.media }}
+      <br><br>
+        <form action="" method="post">
+            <table>
+                {{ form.as_table }}
+            </table>
+            <!--确认模态框-->
+                  <div class="model-alertInfo" id="model-alertInfo">
+                    <div class="model-container">
+                        <div class="model-head">
+                            <span class="model-title">论坛</span>
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="model-body">
+                            <h3 class="message"></h3>
+                        </div>
+                        <div class="model-end">
+                            <input type="submit" name="" value="确认" id="confirm" class="btn get">
+                            <a href="../" class="btn get" id="cancle">确认</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+          <button class="edit " onclick="alertInfoWithJump2('你确定发布吗？','')">提交</button>
+          <button class="edit " onclick="alertInfoWithJump3('你确定取消发布吗？','')">取消</button>
+        <hr>
+    </div>
+  </div>
+
+</section>
+</div>
+</body>
+<footer>
+  <div class="">
+  <hr>
+    <p> Copyright 红蚂蚁实验室</p>
+  <hr>
+  </div>
+</footer>
+<script src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/prettify.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script type="text/javascript" src="/static/js/layout.js"></script>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/forum.js"></script>
+<script type="text/javascript" src="/static/js/alertModel.js"></script>
+</body>
+</html>

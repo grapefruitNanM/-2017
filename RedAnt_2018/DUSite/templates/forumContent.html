@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{ name }}</title>
+
+    <link rel="alternate" type="application/rss+xml" title="" href="/index/">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet" type="text/css">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="/static/css/forum.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+
+    <link rel="stylesheet" href="/static/css/essaystyle.css">
+    <link rel="stylesheet" href="/static/css/projectTeamIndex.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/jquery.tiles.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/forumContent.css">
+    <script src="/static/js/jquery.tiles.js"></script>
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/cornerTop.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/pagination.css">
+</head>
+<body>
+
+{% include 'topBar.html' %}
+<div class="wrapper">
+    {% if user == lpost.postBy or user.is_superuser %}
+        <button onclick="alertInfoWithJump2('确定删除此帖？','delete/')" class="edit"
+                style="margin-top:30px;margin-right: 5%;width:77px;"><i class="fa fa-trash"></i>删除
+        </button>
+    {% endif %}
+    <section>
+        <div class="container" style="width: 100%">
+            <div class="essay">
+                <div>
+                    <img src=/media/{{ lpost.postedBy.last_name }}><span
+                        class="name"> {{ lpost.postedBy.username }}</span><span
+                        class="time">{{ lpost.modify_time }}</span>
+                </div>
+
+                <hr>
+                {% autoescape off %}
+                    {{ lpost.Content }}
+                {% endautoescape %}
+            </div>
+
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        {% for lpost in lposts %}
+            <div class="container" id="ForumContainer">
+                <div class="essay">
+                    <div>
+                        <img src=/media/{{ lpost.postedBy.last_name }}><span
+                            class="name"> {{ lpost.postedBy.username }}</span><span class="time">{{ lpost.modify_time }}
+                        {% if user == lpost.postBy or user.is_superuser %}
+                            <button onclick="alertInfoWithJump2('确定删除此楼？','delete={{ lpost.id }}/')" class="edit"
+                                    style="margin-left: 10px;"><i class="fa fa-trash"></i>删除</button>
+                        {% endif %}</span>
+                    </div>
+                    {% autoescape off %}
+                        {{ lpost.Content }}
+                    {% endautoescape %}
+                </div>
+                <hr>
+                <hr>
+                <hr>
+
+            </div>
+
+        {% endfor %}
+        <div class="docs-content" id="forumContentUE">
+            {{ post.media }}
+            <br><br>
+            <form action="" method="post" id="forumContentUForm">
+                <table>
+                    {{ post.as_table }}
+                </table>
+                <input type="submit" value="提交">
+            </form>
+            <hr>
+        </div>
+        <hr>
+        <hr>
+
+    </section>
+</div>
+<div class="corner-top">
+    <button class="CornerButton" onclick="backTotop()" aria-lable="回到顶部" type="button" data-tooltip="回到顶部"
+            data-tooltip-position="left" id="CornerButton">
+        <svg title="回到顶部" class="Backtotop" FILL="currentColor" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M 16.036 19.59 a 1 1 0 0 1 -0.997 0.995 H 9.032 a 0.996 0.996 0 0 1 -0.997 -0.996 v -7.005 H 5.03 c -1.1 0 -1.36 -0.633 -0.578 -1.416 L 11.33 4.29 a 1.003 1.003 0 0 1 1.412 0 l 6.878 6.88 c 0.782 0.78 0.523 1.415 -0.58 1.415 h -3.004 v 7.005 Z">
+            </path>
+        </svg>
+    </button>
+</div>
+<footer>
+    <div class="">
+        <hr>
+        <p> Copyright 红蚂蚁实验室</p>
+        <hr>
+    </div>
+</footer>
+<!--确认框-->
+<div class="model-alertInfo" id="model-alertInfo">
+    <div class="model-container">
+        <div class="model-head">
+            <span class="model-title">提交</span>
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="model-body">
+            <h3 class="message"></h3>
+        </div>
+        <div class="model-end">
+            <div class="btn get">确 认</div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/prettify.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script type="text/javascript" src="/static/js/layout.js"></script>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/alertModel.js"></script>
+<script type="text/javascript" src="/static/js/backTop.js"></script>
+<script type="text/javascript">
+    //文章多出部分隐藏，点击展开显示
+    var unfolds = document.getElementsByClassName("unfold");
+    var folds = document.getElementsByClassName("fold");
+    var objs = document.getElementsByClassName("article");
+    var show_height = 80;
+    i = 0;
+
+    for (i = 0; i < objs.length; i++) {
+        unfolds[i].index = i;
+        folds[i].index = i;
+        if (objs[i].scrollHeight > show_height) {
+            unfolds[i].style.display = 'block';
+        }
+        else {
+            unfolds[i].style.display = 'none';
+        }
+        unfolds[i].onclick = function () {//加载页面的时候没有onclick，加载完成后再点击的话i就是循环结束后的i了
+            console.log(this.index);      //点一下输出1
+            objs[this.index].style.height = 'auto';
+            unfolds[this.index].style.display = 'none';
+            folds[this.index].style.display = 'block';
+        }
+        folds[i].onclick = function () {
+            objs[this.index].style.height = show_height + 'px';
+            unfolds[this.index].style.display = 'block';
+            folds[this.index].style.display = 'none';
+        }
+    }
+    if (objs.length == 0) {
+
+    }
+</script>
+</body>
+</html>

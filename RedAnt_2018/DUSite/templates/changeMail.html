@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户管理-更改邮箱</title>
+    <meta charset="utf-8">
+    <meta>
+    <link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/manager.css">
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+</head>
+<body ondragstart="return false">
+    {% include 'topBar.html' %}
+        <div class="main-container" id="main">
+            <div class="vacant left"></div>
+            <!-- <div class="vacant right"></div> -->
+            <div class="sidebar">
+                <div class="rw-nav-title"></div>
+                <div class="reverse-nav">
+                    <ul>
+                        <li class="leaf "><a href="/manage/">普通用户 </a>
+                        </li>
+                        <li class="leaf"><a href="/manage/powerUser/">高级用户 </a>
+                        </li>
+                        <li class="leaf"><a href="#">用户日志 </a>
+                        </li>
+                        <li class="leaf"><a href="/manager/invitation/">邀请码 </a>
+                        </li>
+                        <li class="leaf thisleaf"><a href="/manage/changeMail/">消息</a> <a class="newMailNum" href="">12</a></li>
+                    </ul>
+                </div>
+            </div><!--该注释行用于解决inline-block的间距问题
+             --><div class="manager">
+                <!-- <form class="changeMail">
+                    <div class="showline">
+                        <span class="title">当前邮箱</span>
+                        <input type="text" name="old-mail" class="setted" id="old-mail" value="{{ email }}" disabled="disabled">
+                    </div>
+                    <div class="showline">
+                        <span class="title">新邮箱</span>
+                        <input type="text" name="new-mail" placeholder="请在英文输入法下输入，需为163或QQ邮箱" id="new-mail" onchange="checkEmail(this)">
+                        <i class="check" id="checkNewMail"><span></span></i>
+                    </div>
+                    <div class="showline">
+                        <span class="title">授权码</span>
+                        <input type="text" name="new-code" id="new-code" onchange="checkPsw(this)">
+                        <i class="check" id="checkNewCode"><span></span></i>
+                    </div>
+                    <input type="submit" name="save" id="save" value="确定" class="save btn btn-full">
+                </form> -->
+                <div class="manage-btn">
+                    <input type="button" name="readed" value="标为已读" class="btn btn-full" id="readed">
+                    <input type="button" name="reply" value="去回复" class="btn btn-half" id="reply">
+                </div>
+                <div class="newsList">
+                    <table>
+                        <tr>
+                            <th><input type="checkbox" name="all" class="select-all"></th>
+                            <th>姓名</th>
+                            <th>邮箱</th>
+                            <th>时间</th>
+                            <th>内容</th>
+                            {#                            <th>用户Id</th>#}
+                        </tr>
+                        <tr class="new">
+                            <td><input type="checkbox" name="select"></td>
+                            <td>威锋网</td>
+                            <td>515615615@qq.com</td>
+                            <td>2018.7.18 20:15</td>
+                            <td>
+                                似乎只是一瞬间，时光便悄悄的滑过了三月的轮廓。在这烟花般的季节里，我怀着对曾经的感怀，静静的游荡在这片蒙蒙烟雨间。
+
+雨落无声，回忆无数。触摸着那丝丝微丝细雨。
+                            </td>
+                            <tr>
+                            <td><input type="checkbox" name="select"></td>
+                            <td>威锋网</td>
+                            <td>515615615@qq.com</td>
+                            <td>2018.7.18 20:15</td>
+                            <td>
+                                似乎只是一瞬间，时光便悄悄的滑过了三月的轮廓。在这烟花般的季节里，我怀着对曾经的感怀，静静的游荡在这片蒙蒙烟雨间。
+
+雨落无声，回忆无数。触摸着那丝丝微丝细雨。
+                            </td>
+                            <tr>
+                            <td><input type="checkbox" name="select"></td>
+                            <td>威锋网</td>
+                            <td>515615615@qq.com</td>
+                            <td>2018.7.18 20:15</td>
+                            <td>
+                                似乎只是一瞬间，时光便悄悄的滑过了三月的轮廓。在这烟花般的季节里，我怀着对曾经的感怀，静静的游荡在这片蒙蒙烟雨间。
+
+雨落无声，回忆无数。触摸着那丝丝微丝细雨。
+                            </td>
+                            <tr>
+                            <td><input type="checkbox" name="select"></td>
+                            <td>威锋网</td>
+                            <td>515615615@qq.com</td>
+                            <td>2018.7.18 20:15</td>
+                            <td>
+                                似乎只是一瞬间，时光便悄悄的滑过了三月的轮廓。在这烟花般的季节里，我怀着对曾经的感怀，静静的游荡在这片蒙蒙烟雨间。
+
+雨落无声，回忆无数。触摸着那丝丝微丝细雨。
+                            </td>
+                            <tr>
+                            <td><input type="checkbox" name="select"></td>
+                            <td>威锋网</td>
+                            <td>515615615@qq.com</td>
+                            <td>2018.7.18 20:15</td>
+                            <td>
+                                似乎只是一瞬间，时光便悄悄的滑过了三月的轮廓。在这烟花般的季节里，我怀着对曾经的感怀，静静的游荡在这片蒙蒙烟雨间。
+
+雨落无声，回忆无数。触摸着那丝丝微丝细雨。
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="hide-del" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="model-alertInfo" id="model-alertInfo">
+            <div class="model-container">
+                <div class="model-head">
+                    <span class="model-title">用户管理-更改邮箱</span>
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="model-body">
+                    <h3 class="message"><h3>
+                </div>
+                <div class="model-end">
+                    <div class="btn get">确 认</div>
+                    <!-- <div class="btn shut">关 闭</div> -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <hr>
+                  <p> Copyright 红蚂蚁实验室</p>
+                <hr>
+            </div>
+        </footer>
+</body>
+<script type="text/javascript" src="/static/js/changeMail.js"></script>
+<script type="text/javascript" src="/static/js/alertModel.js"></script>
+</html>

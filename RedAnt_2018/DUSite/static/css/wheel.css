@@ -1,0 +1,129 @@
+html{
+	font-size: 62.5%;
+}
+body{
+	margin: 0;
+	overflow-x: auto;
+}
+#wheel-container.wheel-container{
+	width: 100%;
+	height: 60rem;
+	position: relative;
+	top: 50%;
+	overflow: hidden;
+}
+#wheel-container.wheel-container .bac-lim{
+	width: 79%;
+	height: 100%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+.wheel-container #wheel.wheel{
+	width: 100%;
+	height: 80%;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 0 1px 4px rgba(0,0,0,.4);
+}
+.wheel-container #pre.pre{
+	left: 0;
+}
+.wheel-container #after.after{
+	right: 0;
+}
+.wheel-container #pre.pre,.wheel-container #after.after{
+	position: absolute;
+	height: 100%;
+	background-color: black;
+	opacity: 0;
+	width: 5rem;
+	z-index: 100;
+	display: block;
+}
+.wheel-container .pre i,.wheel-container .after i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 3rem;
+	color: white;
+}
+.wheel-container #photo.photo{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.wheel-container .photo img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	/*opacity: 0;*//*2*/
+	opacity: 1;
+}
+.wheel-container #wheel-spot.wheel-spot{
+	width: 100%;
+	height: 5rem;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%,50%);
+}
+.wheel-container .wheel-spot .spot{
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 100;
+	display: inline-block;
+	margin: 0.8rem;
+}
+.wheel-container .wheel-spot .active-spot{
+	background-color: #AAA;
+}
+.wheel-container #photo.photo:hover .pre,.wheel-container #photo.photo:hover .after{
+	-webkit-animation-name: wheel-hover;
+	-webkit-animation-duration: 0.4s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	-o-animation-name: wheel-hover;
+	-o-animation-duration: 0.4s;
+	-o-animation-timing-function: linear;
+	-o-animation-fill-mode: forwards;
+	animation-name: wheel-hover;
+	animation-duration: 0.4s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+@keyframes wheel-hover{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0.6;
+	}
+}
+.wheel-container #photo.photo .trans-eff{
+	/*transition: opacity 0.6s linear;/*2*/
+	transition: left 0.6s linear;
+}
+.wheel-container #photo.photo .curr-img{/*2*/
+	opacity: 1;
+}
+.wheel-container #photo.photo .curr{/*1*/
+	left: 0;
+}
+.wheel-container #photo.photo .last{
+	left: -100%;
+}
+.wheel-container #photo.photo .hide{
+	left: 100%;
+}

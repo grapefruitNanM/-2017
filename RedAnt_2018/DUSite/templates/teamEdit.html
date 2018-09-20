@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>编辑项目组</title>
+
+    <link rel="alternate" type="application/rss+xml" title="" href="/index/">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/static/css/jquery.tiles.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/wheel.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/cornerTop.css">
+
+    <link rel="stylesheet" href="/static/css/essaystyle.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="stylesheet" href="/static/css/jindutiao.css">
+    <link rel="stylesheet" href="/static/css/liebiao.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/jquery.tiles.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <script src="/static/js/jquery.tiles.js"></script>
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+</head>
+<body>
+{% include 'topBar.html' %}
+
+<div class="wrapper">
+<section>
+  <div class="container">
+    <div style="text-align: center;">
+      {{ editor.media }}
+      <br><br>
+        <form method="post" enctype="multipart/form-data">
+        <div style="border: 1px;border-color: #ddd;margin: auto;">
+            <table>
+                {{ editor.as_table }}
+            </table>
+        </div>
+             
+          <!--确认模态框-->
+                  <div class="model-alertInfo" id="model-alertInfo">
+                    <div class="model-container">
+                        <div class="model-head">
+                            <span class="model-title">编辑项目组</span>
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="model-body">
+                            <h3 class="message"></h3>
+                        </div>
+                        <div class="model-end">
+                            <input type="submit" name="" value="确认" id="confirm" class="btn get">
+                            <a href="../" class="btn get" id="cancle">确认</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+          <button class="edit" onclick="alertInfoWithJump2('你确定要提交此次修改吗？','')">提交</button>
+          <button class="edit" onclick="alertInfoWithJump3('你确定取消本次修改吗？','')">取消</button>
+        <hr>
+    </div>
+  </div>
+
+</section>
+</div>
+<footer>
+  <div class="">
+  <hr>
+    <p> Copyright 红蚂蚁实验室</p>
+  <hr>
+  </div>
+</footer>
+<div class="model-alertInfo" id="model-alertInfo">
+            <div class="model-container">
+                <div class="model-head">
+                    <span class="model-title">网站组</span>
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="model-body">
+                    <h3 class="message"></h3>
+                </div>
+                <div class="model-end">
+                    <div class="btn get">确 认</div>
+                </div>
+            </div>
+        </div>
+</div>
+<script src="/static/WebTeam/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/signIn.js"></script>
+<script type="text/javascript" src="/static/js/prettify.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script type="text/javascript" src="/static/js/layout.js"></script>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/alertModel.js"></script>
+
+<script type="text/javascript" src="/static/js/wheel.js"></script>
+</body>
+</html>

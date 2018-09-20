@@ -1,0 +1,32 @@
+<div class="jquery-accordion-menu-con">
+<div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+    <div class="jquery-accordion-menu-header" id="form">
+        <span>{{course.Name}}</span>
+    </div>
+    <ul id="demo-list">
+        {% for zj in zjs %}
+        <li><a href="#"><i class="fa fa-calendar"></i>{{ zj.name }} </a>
+            <ul class="submenu">
+                {% for zjs in zj.details.all %}
+                    <li>
+                        <a href="/courses/major={{ course.id }}?zjs_id={{ zjs.id }}">{{ zjs.name }} </a>
+                    </li>
+                {% endfor %}
+                {% if perms.auth.change_couser %}
+                <li>
+                    <a href="/courses/zhangjie_small_add?zj_id={{ zj.id }}&kecheng={{ course.id }}&zj={{ zj.name }}" class="addPart"><button class="addSlides">添加子章节</button></a> 
+
+                </li>
+                <li>
+                    <a href="/courses/zj_del?zj_id={{ zj.id }}&kecheng={{ course.id }}&zj={{ zj.name }}" class="addPart"><button class="addSlides">删除此章节</button></a>
+                </li>
+                {% endif %}
+            </ul>
+        </li>
+        {% endfor %}
+    <li>
+        <a href="/courses/zhangjie_add?kecheng={{ course.id }}"><i class="fa fa-calendar"></i>新增章节 </a>
+    </li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- [if lt IE 9]><script src="js/html5.js"></script><![endif] -->
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/jquery.tiles.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/jquery.tiles.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/wheel.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+  </head>
+    <body>
+        {% include 'topBar.html' %}
+        <div class="limit">
+        <!-- Project -->
+        <div class="project">
+            <div class="intr">
+                <div class="img-group poster">
+                    {% for poster in posters %}
+                        <div class="proimg" id="proimg">
+                            <div>
+                                <img src=/media/{{ poster.fileField }}>
+                                <div class="back-img-hover" id="back-img-hove">
+                                    <div  class="hover-eff">
+                                        <a href="delete={{ poster.fileField }}/">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <br>
+                <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ fileForm }}
+                <button class="upload"><i class="fa fa-upload" aria-hidden="true"></i>上传</button>
+                 </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+        </div>
+        <div class="contact" id="contact">
+            <div class="title-contact">{{ contact.Name }}</div>
+            <div class="line-con"><div class="line"></div></div>
+            <div class="intr-contact">
+                <p>
+                {% autoescape off %}
+                        <span class="edit-target">{{ contact.Content }}</span>
+                {% endautoescape %}
+                {% if user.is_superuser %}
+                <button class="btn edit" onclick="window.location.href= 'contactUs/'">编辑</button>
+                {% endif %}
+                </p>
+            </div>
+            <div id="u189" class="ax_default primary_button" data-label="send">
+                <div id="u190" class="text" style="visibility: visible;">
+                <p id="contactUs"><span>给我们发邮件</span></p>
+                </div>
+            </div>
+            <div class="model-hide model-email" id="model-email">
+                <div class="model-container">
+                    <div class="model-head">
+                        <span class="model-title">发邮件</span>
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="model-body">
+                        <div class="send-email">
+                            <form id="send-email">
+                                <div class="body-line">
+                                    <label for="from-mail">* 留下你的邮箱: </label>
+                                    <input id="from-mail" type="text" placeholder="实验室的回信将会发到这个邮箱" onchange="checkFromMail(this)" />
+                                    <i class="check fa" id="check-from-mail"></i>
+                                </div>
+                                <div class="body-line">
+                                    <label for="from-name">发件人姓名: </label>
+                                    <input id="from-name" type="text" placeholder="填写你的真实姓名"/>
+                                    <!-- <i class="check fa fa-check" id="check-psw"></i> -->
+                                </div>
+                                <div class="body-line">
+                                    <label for="from-content">* 你想说的话: </label>
+                                    <textarea id="from-content" type="text" placeholder="写下你的疑问或心声！"/></textarea>
+                                    <!-- <i class="check fa fa-check" id="check-psw"></i> -->
+                                </div>
+                                <input type="submit" name="send" value="发 送" id="send">
+                            </form>
+                        </div>
+                    </div>
+                <!-- <div class="model-end">
+                    <a href="#">忘记密码？</a>
+                </div> -->
+            </div>
+            </div>
+        </div>
+        <div class="model-alertInfo" id="model-alertInfo">
+            <div class="model-container">
+                <div class="model-head">
+                    <span class="model-title">联系我们</span>
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="model-body">
+                    <h3 class="message"></h3>
+                </div>
+                <div class="model-end">
+                    <div class="btn get">确 认</div>
+                    <!-- <div class="btn shut">关 闭</div> -->
+                </div>
+            </div>
+        </div>
+    <script type="text/javascript" src="/static/js/alertModel.js"></script>
+    <script type="text/javascript" src="/static/js/signIn.js"></script>
+    <script type="text/javascript" src="/static/js/contact.js"></script>
+    <script type="text/javascript" src="/static/js/wheel.js"></script>
+    <script type="text/javascript" src="/static/js/news.js"></script>
+        <footer>@大连理工大学红蚂蚁实验室</footer>
+    </body>
+</html>

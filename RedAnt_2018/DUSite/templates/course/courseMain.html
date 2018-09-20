@@ -1,0 +1,30 @@
+<style>
+    #submit{width: 60px;border-radius: 5px; background-color: deepskyblue;border: none; color: white; height: 30px;}
+</style>
+
+ <!--course-->
+<div class="course">
+    <div class="intr">
+        <div class="couvideo" id="couvideo">
+        <div>
+            <div class="coutitle">
+                <h3>{{ course.Name }} </h3>
+            </div>
+            {% if perms.RedAnt.delete_course %}
+                <button onclick="alertInfoWithJump2('确定删除此课程吗？','?operating=delete')" class="edit rightBottom"><i class="fa fa-trash"></i>删除</button>{% endif %}
+            {% if perms.RedAnt.change_course %}
+                 <button onclick="window.location.href='edit/' " class="edit rightBottom"><i class="fa fa-pencil"></i>编辑</button>
+            {% endif %}
+             <p>
+            {% autoescape off %}
+                {{ course.Introduction }}
+             {% endautoescape %}
+            </p>
+        </div>
+    </div>
+    <div class="clear"></div>
+ </div>
+</div>
+<br><br><br>
+
+

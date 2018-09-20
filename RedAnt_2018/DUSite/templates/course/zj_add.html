@@ -1,0 +1,52 @@
+﻿<style>
+    #submit{width: 60px;border-radius: 5px; background-color: deepskyblue;border: none; color: white; height: 30px;}
+</style>
+<div class="jquery-accordion-menu-con">
+    <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+
+                    <div class="jquery-accordion-menu-header" id="form">
+                        <a href="/courses/major={{ course.id }}/" style="color: inherit;">{{ course.Name }}</a>
+                    </div>
+                    <ul id="demo-list">
+                        <li>
+                            <a href=""><i class="fa fa-calendar"></i>新增章节 </a>
+                        </li>
+                    </ul>
+    </div>
+</div>
+<div class="main-container" >
+    <div style="margin-left: 450px;">
+        <form action="" enctype="multipart/form-data" method="post">
+            <table>
+                <colsgroup>
+                    <col style="width: 120px;">
+                    <col>
+                </colsgroup>
+                <tr >
+                    <td>
+                        <span>课程名</span>
+                    </td>
+                    <td>
+                        {{ course.Name }}
+                        <input type="hidden" name="kecheng" value="{{ kecheng }}">
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <span>章节名</span>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name" placeholder="请输入章节名">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <button id="submit" type="submit" >提交</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>

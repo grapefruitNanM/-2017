@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{ team.TeamName }}</title>
+
+    <link rel="alternate" type="application/rss+xml" title="" href="/index/">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <!-- <link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="/static/css/projectTeamIndex.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/essaystyle.css">
+    <link rel="stylesheet" href="/static/css/projectTeamIndex.css">
+    <link rel="stylesheet" href="/static/css/animate.css">
+    <link rel="stylesheet" href="/static/css/jindutiao.css">
+    <link rel="stylesheet" href="/static/css/liebiao.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" href="/static/css/jquery.tiles.min.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+    <script src="/static/js/jquery.tiles.js"></script>
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/cornerTop.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/pagination.css">
+</head>
+<body>
+{% include 'topBar.html' %}
+<input id="team-id-hidden" type="hidden" value="{{ team.id }}">
+<div class="wrapper">
+    <section>
+        <div class="container">
+            <!--侧边页面内导航栏-->
+            <ul id="ul-nav" class="docs-nav">
+                <li><a href="#1" class="cc-active">项目组简介</a></li>
+                <li><a href="#3" class="cc-active">项目组日志</a></li>
+                
+                {% if user.is_authenticated %}
+                    <li><a href="#5" class="cc-active">学习资源</a></li>
+                {% endif %}
+                <li class="separator"></li>
+            </ul>
+            <div class="docs-content">
+                <div class="introduce">
+                    <h3 id="1"> {{ team.TeamName }} {% if perms.RedAnt.delete_projectteam %}
+                        <button onclick="alertInfoWithJump2('你确定要删除这个项目组吗？','delete/')" class="edit rightBottom"><i
+                                class="fa fa-trash"></i>删除
+                        </button>{% endif %}{% if user.first_name == team.TeamName or user.is_superuser %}
+                        {% if perms.RedAnt.change_projectteam %}
+                            <button onclick="window.location.href='edit/'" class="edit rightBottom"><i
+                                    class="fa fa-pencil"></i>编辑
+                            </button>
+                        {% endif %}
+                    {% endif %}
+                    </h3>
+                    <br>
+                    <p>
+                        {% autoescape off %}
+                            {{ team.Introduction }}
+                        {% endautoescape %}
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3 id="3">日志 {% if perms.RedAnt.add_blog %}
+                        {% if user.first_name == team.TeamName or user.is_superuser %}
+                            <button onclick="window.location.href='article=new/'" class="edit rightBottom"><i
+                                    class="fa fa-plus"></i>新建日志
+                            </button>
+                        {% endif %}
+                    {% endif %}
+                    </h3>
+                    <hr style="margin-top: 0px">
+                    <ul class="cbp_tmtimeline">
+                        <li class="group-blog">
+                            <time class="cbp_tmtime">
+                                <span id="11.8"><div class="msg" id="time-m-d"></div></span>
+                                <span><div class="msg" id="time-y"></div></span>
+                            </time>
+                            <div class="cbp_tmlabel">
+                                <div style="width:100%">
+                                    <div id="article" class="article">
+                                        <h4>
+                                            <div class="msg" id="blog-name"></div>
+                                        </h4>
+                                        <p id="content">
+                                        <div class="intro"></div>
+                                        </p>
+                                    </div>
+                                    <button class="unfold foldbutton"><i class="fa fa-angle-double-down"></i>展开</button>
+                                    <button class="fold foldbutton"><i class="fa fa-angle-double-up"></i> 收起</button>
+                                </div>
+                                {% if user.first_name == team.TeamName or user.is_superuser %}
+                                    {% if perms.RedAnt.delete_blog %}
+                                        <button id="del-button" class="edit"><i class="fa fa-trash"></i>删除</button>
+                                    {% endif %}
+                                    {% if perms.RedAnt.change_blog %}
+                                        <button id="mod-button" class="edit"><i class="fa fa-pencil"></i>编辑</button>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="group-blog">
+                            <time class="cbp_tmtime">
+                                <span id="11.8"><div class="msg" id="time-m-d"></div></span>
+                                <span><div class="msg" id="time-y"></div></span>
+                            </time>
+                            <div class="cbp_tmlabel">
+                                <div style="width:100%">
+                                    <div id="article" class="article">
+                                        <h4>
+                                            <div class="msg" id="blog-name"></div>
+                                        </h4>
+                                        <p id="content">
+                                        <div class="intro"></div>
+                                        </p>
+                                    </div>
+                                    <button class="unfold foldbutton"><i class="fa fa-angle-double-down"></i>展开</button>
+                                    <button class="fold foldbutton"><i class="fa fa-angle-double-up"></i> 收起</button>
+                                </div>
+                                {% if user.first_name == team.TeamName or user.is_superuser %}
+                                    {% if perms.RedAnt.delete_blog %}
+                                        <button id="del-button" class="edit"><i class="fa fa-trash"></i>删除</button>
+                                    {% endif %}
+                                    {% if perms.RedAnt.change_blog %}
+                                        <button id="mod-button" class="edit"><i class="fa fa-pencil"></i>编辑</button>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="group-blog">
+                            <time class="cbp_tmtime">
+                                <span id="11.8"><div class="msg" id="time-m-d"></div></span>
+                                <span><div class="msg" id="time-y"></div></span>
+                            </time>
+                            <div class="cbp_tmlabel">
+                                <div style="width:100%">
+                                    <div id="article" class="article">
+                                        <h4>
+                                            <div class="msg" id="blog-name"></div>
+                                        </h4>
+                                        <p id="content">
+                                        <div class="intro"></div>
+                                        </p>
+                                    </div>
+                                    <button class="unfold foldbutton"><i class="fa fa-angle-double-down"></i>展开</button>
+                                    <button class="fold foldbutton"><i class="fa fa-angle-double-up"></i> 收起</button>
+                                </div>
+                                {% if user.first_name == team.TeamName or user.is_superuser %}
+                                    {% if perms.RedAnt.delete_blog %}
+                                        <button id="del-button" class="edit"><i class="fa fa-trash"></i>删除</button>
+                                    {% endif %}
+                                    {% if perms.RedAnt.change_blog %}
+                                        <button id="mod-button" class="edit"><i class="fa fa-pencil"></i>编辑</button>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                
+                <input id="cur-page" type="hidden">
+                <input id="tol-page" type="hidden">
+                <div style="text-align: center;">
+                <ul id="pagination" class="pagination">
+                </ul>
+                </div>
+                <hr>
+                <hr>
+
+                {% if user.is_authenticated %}
+                    <h3 id="5">学习资源</h3>
+                    <ol class="rectangle-list">
+                        {% for resource in resourceList %}
+                            <li><a href="/media/{{ resource.fileField }}">{{ resource.name }}
+                            </a>
+                                {% if user.first_name == team.TeamName or user.is_superuser %}
+                                    {% if perms.RedAnt.delete_learningresources %}
+                                        <button class="DeleteResouse"
+                                                onclick=" alertInfoWithJump2('确认删除？','delete/resource={{ resource.fileField }}/')">
+                                            <i class="fa fa-trash"></i>删除
+                                        </button>
+                                    {% endif %}
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
+                {% if user.first_name == team.TeamName or user.is_superuser %}
+                    {% if perms.RedAnt.delete_learningresources %}
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ fileForm }}
+                            <button id="upload"><i class="fa fa-upload" aria-hidden="true"></i>上传</button>
+                        </form>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <!--删除项目组-->
+            <div class="model-alertInfo" id="model-alertInfo">
+                <div class="model-container">
+                    <div class="model-head">
+                        <span class="model-title">项目组</span>
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <div class="model-body">
+                        <h3 class="message"></h3>
+                    </div>
+                    <div class="model-end">
+                        <div class="btn get">确 认</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <div>
+        <hr>
+        <p> Copyright 红蚂蚁实验室</p>
+        <hr>
+    </div>
+    <div class="corner-top">
+        <button class="CornerButton" onclick="backTotop()" aria-lable="回到顶部" type="button" data-tooltip="回到顶部"
+                data-tooltip-position="left" id="CornerButton">
+            <svg title="回到顶部" class="Backtotop" FILL="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M 16.036 19.59 a 1 1 0 0 1 -0.997 0.995 H 9.032 a 0.996 0.996 0 0 1 -0.997 -0.996 v -7.005 H 5.03 c -1.1 0 -1.36 -0.633 -0.578 -1.416 L 11.33 4.29 a 1.003 1.003 0 0 1 1.412 0 l 6.878 6.88 c 0.782 0.78 0.523 1.415 -0.58 1.415 h -3.004 v 7.005 Z">
+                </path>
+            </svg>
+        </button>
+    </div>
+</footer>
+<script src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/signIn.js"></script>
+<script type="text/javascript" src="/static/js/prettify.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script type="text/javascript" src="/static/js/layout.js"></script>
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/alertModel.js"></script>
+<script type="text/javascript" src="/static/js/backTop.js"></script>
+<script type="text/javascript" src="/static/js/projectTeam.js"></script>
+
+<script type="text/javascript">
+    var editor = document.getElementById("id_Content")
+    editor.style.display = 'block';
+    editor.style.width = '100%';
+    //删除file
+    getElementsByTagName("body > div.wrapper > section > div > div.docs-content > form")
+</script>
+</body>
+</html>

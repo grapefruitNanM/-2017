@@ -1,0 +1,1010 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"l",
+				"length"
+			],
+			[
+				"bc",
+				"bgc\tbackground-color: #${1:fff};"
+			],
+			[
+				"getE",
+				"getElementsByClassName"
+			],
+			[
+				"bac",
+				"back-img-hover"
+			],
+			[
+				"get",
+				"getElementsByClassName"
+			],
+			[
+				"ba",
+				"BadWords"
+			],
+			[
+				"p",
+				"platform"
+			],
+			[
+				"Class",
+				"ClassBB"
+			],
+			[
+				"Cla",
+				"ClassA"
+			],
+			[
+				"Clas",
+				"ClassB"
+			],
+			[
+				"t",
+				"toString"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"show",
+				"showColor"
+			],
+			[
+				"c",
+				"car3"
+			],
+			[
+				"sho",
+				"showColor"
+			],
+			[
+				"cerr",
+				"createCar0"
+			],
+			[
+				"do",
+				"doThings"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"forget",
+				"forget-model"
+			],
+			[
+				"check",
+				"checkMail"
+			],
+			[
+				"part",
+				"partition"
+			],
+			[
+				"se",
+				"section"
+			],
+			[
+				"ge",
+				"getQueryString"
+			],
+			[
+				"al",
+				"alertInformation"
+			],
+			[
+				"alert",
+				"alertInformation"
+			],
+			[
+				"sel",
+				"selfavatar"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"post",
+				"postId"
+			],
+			[
+				"comment",
+				"comment_id"
+			],
+			[
+				"img",
+				"imgHref"
+			],
+			[
+				"person",
+				"personalCenter"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"delete",
+				"deleteFollow"
+			],
+			[
+				"dele",
+				"deleteFollow"
+			],
+			[
+				"op",
+				"opacity\tproperty"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"chang",
+				"chageRelationship"
+			],
+			[
+				"table",
+				"tableList"
+			],
+			[
+				"change",
+				"changeFront"
+			],
+			[
+				"spa",
+				"spanList"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"sapn",
+				"spanList"
+			],
+			[
+				"spna",
+				"spanList"
+			],
+			[
+				"rel",
+				"relationship"
+			],
+			[
+				"cur",
+				"cursor\tproperty"
+			],
+			[
+				"j",
+				"jpg"
+			],
+			[
+				"im",
+				"images"
+			],
+			[
+				"s",
+				"success"
+			],
+			[
+				"ini",
+				"initMail"
+			],
+			[
+				"on",
+				"onclick"
+			],
+			[
+				"margin-",
+				"margin-bottom\tproperty"
+			],
+			[
+				"che",
+				"checkAccount"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"dis",
+				"disabled"
+			],
+			[
+				"male",
+				"male"
+			],
+			[
+				"b",
+				"brief-intr"
+			],
+			[
+				"v",
+				"verif-code"
+			],
+			[
+				"va",
+				"val"
+			],
+			[
+				"for",
+				"forget"
+			],
+			[
+				"re",
+				"refresh"
+			],
+			[
+				"ver",
+				"verification"
+			],
+			[
+				"body",
+				"body-line"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"i",
+				"i\tTag"
+			],
+			[
+				"new",
+				"new-code"
+			],
+			[
+				"wor",
+				"word-wrap\tproperty"
+			],
+			[
+				"word",
+				"word-wrap\tproperty"
+			],
+			[
+				"border",
+				"border-radius\tproperty"
+			],
+			[
+				"box",
+				"box-sizing\tproperty"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"back",
+				"backTotop"
+			],
+			[
+				"bo",
+				"bottom\tproperty"
+			],
+			[
+				"email",
+				"emailEl"
+			],
+			[
+				"count",
+				"counter-increment\tproperty"
+			],
+			[
+				"trans",
+				"transform\tproperty"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"counter",
+				"counter-increment\tproperty"
+			],
+			[
+				"cho",
+				"choosen-num"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"inli",
+				"inline-block\tdisplay"
+			],
+			[
+				"send",
+				"send-email"
+			],
+			[
+				"ne",
+				"new-inv"
+			],
+			[
+				"in",
+				"invitation"
+			],
+			[
+				"border-r",
+				"border-radius\tproperty"
+			],
+			[
+				"pers",
+				"perspective-origin\tproperty"
+			],
+			[
+				"backgc",
+				"background-color\tproperty"
+			],
+			[
+				"backc",
+				"background-color\tproperty"
+			],
+			[
+				"a",
+				"break-all"
+			],
+			[
+				"bre",
+				"word-break"
+			],
+			[
+				"text",
+				"text-overflow"
+			],
+			[
+				"int",
+				"initPsw"
+			],
+			[
+				"mode",
+				"model-container"
+			],
+			[
+				"animat",
+				"animation-duration"
+			],
+			[
+				"hin",
+				"hintEl"
+			],
+			[
+				"hi",
+				"hintEl"
+			],
+			[
+				"gte",
+				"getElementById"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"err",
+				"errorMsg"
+			],
+			[
+				"remov",
+				"removeItem"
+			],
+			[
+				"btn",
+				"btn-half"
+			],
+			[
+				"fil",
+				"fileString"
+			],
+			[
+				"ch",
+				"checkAccount"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"g",
+				"getElementsByClassName"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"inde",
+				"z-index"
+			],
+			[
+				"pd",
+				"padding-left"
+			],
+			[
+				"set",
+				"set-psw"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"border-l",
+				"border-left"
+			],
+			[
+				"boder",
+				"border"
+			],
+			[
+				"fw",
+				"font-weight"
+			],
+			[
+				"pe",
+				"personalCenter"
+			],
+			[
+				"bore",
+				"border-radius"
+			],
+			[
+				"wra",
+				"overflow-wrap"
+			],
+			[
+				"wrap",
+				"flex-wrap"
+			],
+			[
+				"stand",
+				"stand2"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"per",
+				"personal-set"
+			],
+			[
+				"sign",
+				"sign-up"
+			],
+			[
+				"onkey",
+				"onkeyup\tAttr"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"str",
+				"strPsw"
+			],
+			[
+				"si",
+				"sign-up-mail"
+			],
+			[
+				"chck",
+				"checkMail"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"after",
+				"afterButtonClick"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "templates/changeMail.html",
+			"settings":
+			{
+				"buffer_size": 6671,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ip",
+				"Package Control: Install Package"
+			],
+			[
+				"Emmet",
+				"Toggle Comment"
+			]
+		],
+		"width": 598.0
+	},
+	"console":
+	{
+		"height": 193.0,
+		"history":
+		[
+			"open_in_browser",
+			"sublime.log_commands(True)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/css",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js"
+	],
+	"file_history":
+	[
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/changeMail.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/css/manager.css",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/css/personalCenter.css",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/invitation.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/manager.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/powerUserManage.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/userLogs.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/topBar.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/personalCenter.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/signUp.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/signIn.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/signIn.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/css/home.css",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/css/nav.css",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/signUp.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/signIn (1).js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/powerUserManager.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/manager.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/invitation.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/js/contact.js",
+		"/G/前端/pageTest/JScript Learning test/js-argumentsAndcreateFunction.js",
+		"/G/前端/pageTest/JScript Learning test/StringBuffer类.js",
+		"/G/前端/pageTest/JScript Learning test/inherent.js",
+		"/G/前端/pageTest/JScript Learning test/BOMtest.js",
+		"/G/前端/pageTest/JScript Learning test/ExpRegTest.js",
+		"/G/前端/pageTest/JScript Learning test/jsTestOutPut.html",
+		"/G/前端/pageTest/CSS test/widthTest.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018-master/DUSite/static/js/signIn.js",
+		"/C/Users/lenovo/Documents/Tencent Files/1074516814/FileRecv/projectTeam.html",
+		"/G/前端/pageTest/CSS test",
+		"/C/Users/lenovo/Desktop/RedAnt_2018-master/DUSite/templates/topBar.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018-master/DUSite/templates/signIn.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/signIn.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/signIn.js",
+		"/F/大二小学期Java/小学期大作业--论坛/NBBS-master/src/main/webapp/WEB-INF/html/posts.html",
+		"/F/大二小学期Java/小学期大作业--论坛/NBBS-master/src/main/webapp/static/js/posts.js",
+		"/F/大二小学期Java/小学期大作业--论坛/NBBS-master/src/main/webapp/static/js/mockInfo.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018-master/DUSite/templates/home.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/signIn.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/signUp.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/signUp.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/manager.html",
+		"/F/大二小学期Java/小学期大作业--论坛/NBBS-master/src/main/webapp/static/js/comment.js",
+		"/F/大二小学期Java/小学期大作业--论坛/分区.json",
+		"/F/大二小学期Java/小学期大作业--论坛/NBBS-master/src/main/webapp/static/js/introduce.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/mockInfo.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/comment.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/replyComment.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/relationship.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/relationshipFromOther.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/personalCenter.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/introduce.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/essaycontent.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/personalCenterEnterFromOthers.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/introduce.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/editor.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/verification.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/personalSet.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/alertModel.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/rel.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/magnific-popup-options.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/introduce.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS+1/HTML+CSS+JS/introduce.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/signUp.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/home.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/personalCenter.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/personalCenter.css",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/poster.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/home.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/js/manager.js",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/manager.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/posts.html",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/base.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/index.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/magnific-popup.css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/style (2).css",
+		"/F/大二小学期Java/小学期大作业--论坛/HTML+CSS+JS/css/navbar-respons.css",
+		"/G/前端/pageTest/点击由小翻转变大/index.html",
+		"/G/前端/pageTest/点击由小翻转变大/main.css",
+		"/G/前端/pageTest/点击由小翻转变大/main.js",
+		"/F/算法/parse.js",
+		"/C/Users/lenovo/Desktop/changeMail.js",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/templates/changeMail.html",
+		"/C/Users/lenovo/Desktop/RedAnt_2018/DUSite/static/css/signUp.css",
+		"/G/前端/HuaiMeng/HM-master/web/signup.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/signUp.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/css/home.css",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/css/cornerTop.css",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/signIn.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/css/wheel.css",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/css/alertModel.css",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/powerUserManage.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/invitation.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/manager.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/personalCenter.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/css/nav.css",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/home.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/js/signIn.js",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/projectTeam.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/poster.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/js/personalCenter.js",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/js/contact.js",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/css/personalCenter.css",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/js/backTop.js",
+		"/G/前端/pageTest/CSS3 3D/transform 3D example.html",
+		"/F/科技文化节/软猿三结义/css/corner-top.css",
+		"/F/科技文化节/软猿三结义/learn.html",
+		"/F/科技文化节/软猿三结义/js/introduce.js",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/templates/teamEdit.html",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/templates/home.html",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/static/css/home.css",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/templates/forum.html",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/templates/manager.html",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/templates/powerUserManage.html",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/static/js/alertModel.js",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/static/js/manager.js",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/static/js/home.js",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/templates/personalCenter.html",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/static/css/manager.css",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/static/css/signUp.css",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/templates/signUp.html",
+		"/C/Users/lenovo/Desktop/RedAnt-5.29/RedAnt/DUSite/static/js/personalCenter.js",
+		"/F/科技文化节/软猿三结义/css/introduce.css",
+		"/G/personal/Java web/apache-tomcat-9.0.8-windows-x64/apache-tomcat-9.0.8/webapps/qianduan/CSScounter/CSScounter.html",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/js/signUp.js",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/css/normalize.css",
+		"/C/Users/lenovo/Desktop/RedAnt/DUSite/static/js/alertModel.js",
+		"/G/个人文档/Java web/apache-tomcat-9.0.8-windows-x64/apache-tomcat-9.0.8/webapps/qianduan/CSScounter/CSScounter.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"''",
+			"#42c02e",
+			"failed",
+			"error",
+			"failed",
+			"StringBuffer测试",
+			"navigator",
+			"对象冒充模式继承",
+			"ClassCC",
+			"混合",
+			"/*子类新属性/ 所有新属性和方法都必须在删除了对父类的引用后定义，否则有可能对父类进行覆盖改写*/",
+			"StringBuffer测试end",
+			"Carcar",
+			"car",
+			"混合的构造函数和",
+			"BigCar",
+			"原型模式",
+			"this",
+			"构造函数",
+			"obj",
+			"工厂",
+			"color",
+			"getElementsByTagName('body')[0].",
+			".model-hide .model-container .model-body ",
+			"POST",
+			"datetime",
+			"time",
+			"createTime",
+			"\"",
+			"]",
+			"[",
+			"{\n\t              \"nickname\":Mock.Random.cname(),\n\t              \"avatar\":Mock.Random.url(),\n\t              \"sex\":\"女\",\n\t              \"createTime\":Mock.Random.datetime()\n\t\t        },",
+			"{\n\t              \"nickname\":Mock.Random.cname(),\n\t              \"avatar\":Mock.Random.url(),\n\t              \"sex\":\"男\",\n\t              \"createTime\":Mock.Random.datetime()\n\t\t        },",
+			"女",
+			"男",
+			"\"int\"",
+			"|1-999",
+			"spanList",
+			"$(input)",
+			"psw",
+			"init",
+			"refresh",
+			"psw",
+			"HTML+CSS+JS",
+			"../../../../../../",
+			"../../../../../../HTML+CSS+JS/",
+			"/static/",
+			"signIn",
+			"0",
+			"javascript:",
+			"true",
+			"/static/",
+			" ",
+			"’",
+			"'",
+			"‘",
+			"..",
+			"span",
+			"..",
+			".model-body",
+			"model-body",
+			".model-hide ",
+			"this",
+			"span",
+			"TeamName",
+			"account",
+			"\n                    <div class=\"img-group\">",
+			" <div class=\"img-group\">\n                    <div class=\"proimg\" id=\"proimg\">\n                        <div>\n                            <img src=\"/static/images/11.jpg\">\n                            <div class=\"back-img-hover\" id=\"back-img-hove\">\n                                <div  class=\"hover-eff\">\n                                    <h2>网站组</h2>\n                                    <p>2008年-2014年，学生科技竞赛获省级以上奖励2004项，其中，国际级207项。在“挑战杯”全国大学生课外学术科技作品竞赛中4次获得“优胜杯”，在“中国机器人大赛”中多次获得冠军。</p>\n                                    <a href=\"#\">了解更多</a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>",
+			"Zoe never had the patience of her sisters. She deliberately punched the bear in his face.",
+			"contact",
+			"Contact",
+			"contact",
+			"..",
+			"table",
+			"\n",
+			"; ",
+			"img",
+			"3",
+			"5",
+			"128",
+			"img",
+			"orange",
+			"proGroup",
+			"check",
+			"overflow: hidden;",
+			"id=\"psw\"",
+			"SetPsw",
+			"setPsw",
+			"set-psw",
+			"check-psw",
+			"account",
+			"hide",
+			" .",
+			"container",
+			"0.4",
+			"0.5",
+			"]);\n",
+			"td[j]",
+			"files",
+			"fileS",
+			"files",
+			"el",
+			"errorMsg",
+			"[0]",
+			"red",
+			"sign-up",
+			"form",
+			"sign-up",
+			"news",
+			"dropdown",
+			"cp",
+			"[0]",
+			"tip",
+			"#FF3030",
+			" style=\"color: red;\"",
+			"font-size: 1.6rem",
+			"piece-0",
+			"piece-1",
+			"piece-2",
+			"piece-3",
+			"piece-4",
+			"piece-0",
+			"piece-1",
+			"piece-2",
+			"piece-3",
+			"piece-4",
+			"}",
+			"li3"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"rem"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "templates/changeMail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								528,
+								528
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "Packages/User/untitled.sublime-build",
+	"project": "大创.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

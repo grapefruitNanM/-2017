@@ -1,0 +1,132 @@
+header{
+	display: block;
+}
+html{
+	font-size: 62.5%;
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+}
+body{
+	background: url("/static/images/22.jpg");
+	background-size: cover;
+	overflow-x: hidden;
+	/*background-repeat: no-repeat;*/
+}
+header.sign-up-header{
+	font-size: 5rem;
+	width: 100%;
+	height: auto;
+	line-height: 10rem;
+	color: #436EEE;
+}
+header.sign-up-header strong{
+	margin-left: 5rem;
+}
+header.sign-up-header a{
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: #696969;
+	position: relative;
+	float: right;
+	margin-right: 6rem;
+}
+header.sign-up-header a:hover{
+	text-decoration: underline;
+}
+#sign-up-container.sign-up-container{
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 33%;
+	left: 50%;
+	background-color: rgba(0,0,0,0.6);
+	width: 40%;
+	height: 35rem;
+	border-radius: 1rem;
+	min-width:30rem;
+}
+footer{
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	bottom: 2px;
+}
+div#sign-up-title{
+	text-align: center;
+	width: 100%;
+	font-size: 2rem;
+	position: relative;
+	top: 5%;
+	color: #4876FF;
+	font-weight: 600;
+	font-style: 2.2rem;
+}
+.sign-up input{
+	outline:none;
+	background: rgba(256,256,256,0.4);
+	border: none;
+	/*border-bottom: solid black 1px;*/
+}
+::-moz-focus-inner{border:0px;}   /*去除按钮点击时出现的虚线边框*/
+#sign-up-container.sign-up-container form{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	transform: translate(0,-50%);
+	top: 50%;
+	/*left: 50%;*/
+}
+form.sign-up .sign-up-name,form.sign-up .sign-up-password,form.sign-up .sign-up-mail,form.sign-up .check-psw{
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	position: relative;
+	text-align: center;
+}
+form.sign-up .sign-up-name >span,form.sign-up .sign-up-password >span,form.sign-up .sign-up-mail >span,form.sign-up .check-psw >span{
+	width: auto;
+	font-size: 1.6rem;
+	font-weight: 600;
+	overflow: hidden;
+	color: white;
+	display: inline-block;
+	height: 2rem;
+	/*text-align: right;*/
+}
+form.sign-up input{
+	height: 3rem;
+	width: 24rem;
+	line-height: 3rem;
+	border-radius: /*0.5rem 0.5rem 0 0;*/0.5rem;
+}
+form.sign-up input#sign-up-btn{
+	width: 16rem;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	border: none;
+	background-color: #00B2EE;
+	opacity: 0.8;
+	border-radius: 1rem;
+	font-weight: bold;
+	font-size: 1.6rem;
+	height: 3.5rem;
+	margin-top: 0.5rem;
+}
+form.sign-up span.check{
+	position: relative;
+	color: red;
+	font-size: 1.6rem;
+	width: 100%;
+	display: block;
+	text-align: center;
+	height: 2rem;
+}
+form.sign-up span.check i{
+	opacity: 0;
+	margin: 0 0.5rem;
+}
+form.sign-up span.check span{
+	color: red;
+	font-weight: normal;
+}

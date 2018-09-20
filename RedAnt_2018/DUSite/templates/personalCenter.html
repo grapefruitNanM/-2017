@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>个人中心</title>
+    <meta charset="utf-8">
+    <meta>
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+</head>
+<body>
+    {% include 'topBar.html' %}
+        <div class="main-container" id="main">
+            <div class="vacant left"></div>
+            <!-- <div class="vacant right"></div> -->
+            <!--该注释行用于解决inline-block的间距问题
+        --><div class="change">
+                <table>
+                    <tr><td>
+                        <img src="/media/{{ user.last_name }}" alt="用户头像"></td>
+                        <td>
+                            <div class="upload">
+                                <div class="content">
+                                <form action="changeImg/" method="post" enctype="multipart/form-data">
+                                    <label for="id_file">上传图片:</label>
+                                    <input id="id_file" name="file" type="file" required="" accept = 'image/*'>
+                                    {% csrf_token %}
+                                    <button class="upload" type="submit"><i class="fa fa-upload" aria-hidden="true"></i>上传</button>
+                                </form>
+                                </div>
+                            </div>
+                        </td></tr>
+                    <tr class="name"><td class="setting-title">
+                        <span>用户名</span></td>
+                        <td>
+                            <input type="text" name="username" id="username" value='{{ user }}' onchange="checkAccount(this)" disabled="disabled"  onfocus="show(this)" onblur="hide(this)"><!--  -->
+                            <a href="javascript:void(0)" class="disable">修改用户名</a>
+                            <i class="check fa fa-close" id="check-name"><span></span></i>
+                            <i class="hint-checkname fa fa-exclamation-circle"></i>
+                    </td></tr>
+{#                  <tr><td class="setting-title">#}
+{#                      <span>用户id</span></td>#}
+{#                      <td><span class="setted">{{ user.first_name }}</span>#}
+{#                      <span class="setted-tip"><i class="fa fa-check"></i>自动绑定</span>#}
+{#                  </td></tr>#}
+                    <tr><td class="setting-title">
+                        <span>账号密码</span></td>
+                        <td>
+                            <!-- ??? -->
+                            <span class="change-only"><a href="javascript:void(0)" id="showSetPsw">修改密码</a></span>
+                            <div class="set-psw">
+                                <div class="show conf-old-psw">
+                                    <span>确认旧密码：</span>
+                                    <input id="prePsw" type="password" name="prePsw" placeholder="请输入旧密码" maxlength="20" minlength="6" onfocus="showHint(this)" onblur="hideHint(this)" onchange="checkPrepsw(this)">
+                                    <i class="fa check"></i>
+                                    <span class="hint"><i class="fa fa-exclamation-circle"></i><span  id="hint-prePsw"></span></span>
+                                </div>
+                                <div class="show setPsw">
+                                    <span>设置新密码：</span>
+                                    <input id="psw" type="password" name="psw" placeholder="请输入6-20位密码" maxlength="20" minlength="6" onchange="checkPsw(this)"  onfocus="showHint(this)" onblur="hideHint(this)">
+                                    <i class="fa check"></i>
+                                    <span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-psw"></span></span>
+                                </div>
+                                <div id="confirm-psw" class="show check-psw">
+                                    <span>确认新密码：</span>
+                                    <input id="cf-psw" type="password" name="cf-psw" placeholder="请再次输入密码" maxlength="20" minlength="6" onchange="confirmPsw(this)" >
+                                    <i class="fa check"></i>
+                                    <span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-cf-psw"></span></span>
+                                </div>
+                                <a href="javascript:void(0)" id="hideSetPsw">取消</a>
+                            </div>
+                    </td></tr>
+                    <tr class="mail"><td class="setting-title">
+                        <span>邮箱</span></td>
+                        <td><span class="setted" id="mail">{{ user.email }}</span>
+                        <span class="setted-tip"><i class="fa fa-check"></i>已绑定</span>
+                        <!-- <a href="javascript:void(0)">更换邮箱</a> -->
+                    </td></tr>
+                    <tr><td class="setting-title">
+                        <span>项目组</span></td>
+                        <td>
+                            <ul class="pro-list" id="pro-list">
+                                <li>
+                                    <span>{{ user.first_name }}</span>
+                                </li>
+                            </ul>
+                            <!-- <span class="change-only"><a href="#">管理项目</a></span> -->
+                    </td></tr>
+                </table>
+                <input type="submit" name="save" value="保存" class="save btn btn-full" id="save">
+            </div>
+        </div>
+        <div class="model-alertInfo" id="model-alertInfo">
+            <div class="model-container">
+                <div class="model-head">
+                    <span class="model-title">注 册</span>
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="model-body">
+                    <h3 class="message"><h3>
+                </div>
+                <div class="model-end">
+                    <div class="btn get">确 认</div>
+                    <!-- <div class="btn shut">关 闭</div> -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <hr>
+                  <p> Copyright 红蚂蚁实验室</p>
+                <hr>
+            </div>
+        </footer>
+        <script type="text/javascript" src="/static/js/personalCenter.js"></script>
+        <script type="text/javascript" src="/static/js/alertModel.js"></script>
+</body>
+</html>

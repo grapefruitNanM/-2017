@@ -1,0 +1,148 @@
+body {
+    color: #444;
+    background: #ededed;
+}
+
+.wrapper {
+    margin: 20px 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 2px rgba(155,155,155,0.1);
+    border: 1px solid #d3d3d3;
+}
+section {
+    padding: 3em 0;
+    text-align: left;
+    background: #fff;
+}
+body > div.wrapper > section > div.container{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+body > div.wrapper > section > div > ul > li>div.cbp_tmlabel{
+	margin-left: 10%;
+}
+body > div.wrapper > section > div.backTop{
+	float: right;
+	position: relative;
+	text-decoration: none;
+	background-color: #26abe2;
+	color: whitesmoke;
+	border-radius: 25px;
+}
+body > div.wrapper > section > div > ul.cbp_tmtimeline{
+	width: 70%;
+	margin:auto;
+}
+body > div.wrapper > section > div > ul > li> time.cbp_tmtime{
+	margin-left: 0px;
+	padding-right: 1%;
+}
+#timeline:before{
+	left:8%;
+}
+#issue{
+	right: 8%;
+	position: absolute;
+}
+#timeline > li> div> div> div.article{
+	margin-bottom:10px;
+}
+.fa-angle-double-up::before {
+    content: "\f102";
+}
+.wrapper > section{
+	padding-top: 70px;
+	padding-bottom:  5%;
+}
+.ul_pages{
+	display: block;
+	margin: auto;
+	width: 20%;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 50px;
+}
+.ul_pages>li{
+	display: inline;
+
+}
+.ul_pages>li>a.active{
+	background-color: #26abe2;
+	color: whitesmoke;
+}
+.ul_pages>li>a{
+	text-decoration: none;
+	font-size: 30px;
+	color: #686e6f;
+	padding: 3px;
+}
+.ul_pages>li>a:hover:not(.active){
+	background-color:#ddd;
+}
+
+.forumIcon{
+	height: 6rem;
+	width: 6rem;
+	position: relative;
+	border-radius: 50%;
+}
+#forumListName{
+	font-size: 16px;
+}
+#post{
+	margin-right: 10%;
+	margin-top: 30px;
+	width: 77px;
+}
+.row{
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#forumContentUE{
+	margin-left: 0;
+	padding-left: 0;
+	text-align:  center;
+}
+#forumContentUForm{
+	margin-left: 0;
+}
+#ForumContainer{
+	margin-bottom: 0px;
+}
+#forumContentUForm > input[type="submit"]{
+	padding-bottom:  3px;
+    padding-top:  3px;
+    width: 100px;
+    display:  block;
+    margin:  auto;
+    max-width:  300px;
+    background-color: #26abe2;
+    border-width: 0;
+    border-color: #43add8;
+    border-radius: 4px;
+    color: white;
+}
+
+.forumList{
+	color: #444;
+}
+
+body > div.wrapper > section > form > input[type="submit"]{
+	padding-bottom:  3px;
+    padding-top:  3px;
+    width: 100px;
+    display:  block;
+    margin:  auto;
+    max-width:  300px;
+    background-color: #26abe2;
+    border-width: 0;
+    border-color: #43add8;
+    border-radius: 4px;
+    color: white;
+}

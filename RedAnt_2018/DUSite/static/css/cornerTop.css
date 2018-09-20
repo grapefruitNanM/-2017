@@ -1,0 +1,32 @@
+.corner-top{
+	position: fixed;
+	width: 4rem;
+	height: 4rem;
+	right: 0rem;
+	bottom: 15rem;
+	background-color: transparent;
+	opacity: 1;
+	display: none;
+	z-index: 200;
+}
+.CornerButton
+{
+	justify-content: center;
+	background-color: rgba(255,255,255,0.8);
+	width: 4rem;
+	height: 4rem;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+	font-size: 14px;
+	color: #8590a6;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	border:none;
+	border-radius: 30%;
+}
+.CornerButton:hover
+{
+	color: black;
+	background-color: rgba(0,0,0,0.2);
+}

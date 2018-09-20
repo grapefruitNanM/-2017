@@ -1,0 +1,85 @@
+     <!--course-->
+        <div class="course">
+            <div class="intr">
+                <div class="couvideo" id="couvideo">
+                    <div>
+                    	<div class="coutitle">
+                    		<h3>{{ zjsmall.name }}</h3>
+                    	</div>
+                        {% if perms.auth.change_couser %}
+                        <button class="rightBottom" onclick="alertInfoWithJump('确认删除此章节？','?zjs_id={{ zjsmall.id }}&operating=delzjs')"><i class="fa fa-trash"></i>删除
+                        </button>
+                        <button class="rightBottom" onclick="window.location.href='/courses/zhangjie_small_add?zj_id={{ zj.id }}&kecheng={{ course.id }}&zj={{ zj.name }}&zjs_id={{ zjsmall.id }}&type=video&zjsmall={{ zjsmall.name }}' " id="videoEdit"><i class="fa fa-pencil"></i>编辑
+                        </button>
+                        <button class="rightBottom" onclick=" window.location.href='/courses/zhangjie_small_add?zj_id={{ zj.id }}&kecheng={{ course.id }}&zj={{ zj }}&zjs_id={{ zjsmall.id }}&type=content&zjsmall={{ zjsmall.name }}' " id="slidsEdit" >
+                            <i class="fa fa-pencil"></i>编辑
+                        </button>
+                        {% endif %}
+                        <div style="margin-top: 10px;margin-left: 5%;">  
+                            <button onclick="video()" class="contButton">视频</button>
+                            <button onclick="slids()" class="contButton">课件</button>
+                            <script type="text/javascript">
+                                function video(){
+                                    document.getElementById("video").style.display='block';
+                                    document.getElementById("slids").style.display='none';
+                                    document.getElementById("videoEdit").style.display='inline-block';
+                                    document.getElementById("slidsEdit").style.display='none';
+                                }
+                                function slids(){
+                                    var x=document.getElementById("video").style.display='none';
+                                    var y=document.getElementById("slids").style.display='block';
+                                    document.getElementById("videoEdit").style.display='none';
+                                    document.getElementById("slidsEdit").style.display='inline-block';
+                                }
+                               
+                            </script>
+
+                            
+                        </div>
+                    </div>
+                    <div class="video" id="video">
+                        <p>{{ zjsmall.video_desc }}</p>
+                            <video controls preload="meta" width="640" height="350" poster="/static/images/poster.png" data-setup="{}">
+                                <source src="/media/course/{{ zjsmall.video}}" type="video/mp4">
+        						<source src="/media/course/{{ zjsmall.video}}" type="video/webm">
+        						<source src="/media/course/{{ zjsmall.video}}" type="video/ogg">
+                            </video>
+                            <hr>
+                    </div>
+                    <!--课件播放-->
+                    <div class="slids" id="slids">
+                        <div>
+                            
+                            <p>
+                                {{ zjsmall.content }}
+                            </p>
+                        </div>
+                        <div id="wheel-container" class="wheel-container">
+                            <div id="wheel" class="wheel">
+                                <div id="photo" class="photo">
+                                    <div id="pre" class="pre">
+                                        <i class="fa fa-angle-left"></i>
+                                    </div>
+                                    {% for img in pics %}
+                                        <img src="/media/course/{{ img.file}}" alt="轮播图片">
+                                    {% endfor %}
+                                    <div id="after" class="after">
+                                        <i class="fa fa-angle-right"></i>
+                                    </div>
+                                </div>
+                                <div id="wheel-spot" class="wheel-spot">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            
+            <div class="clear"></div>
+    
+         <br><br><br>
+
+         </div>
+         
+        
+       

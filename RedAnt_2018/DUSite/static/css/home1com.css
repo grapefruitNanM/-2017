@@ -1,0 +1,368 @@
+html{
+	font-size:62.5%;/*10px=1rem;*/
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+body{
+	margin: 0;
+}
+a{
+	text-decoration:none;
+}
+nav{
+	margin: 0;
+	padding: 0;
+}
+.limit{
+	position: relative;
+	margin: 0;
+	padding: 5% 10%;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: #CCCCCC;
+}
+
+.course img,.course a{
+	display: inline-block;
+	width: 30rem;
+	height: 20rem;
+	position: relative;
+	float: left;
+}
+.course span{
+	position: relative;
+	display: inline-block;
+	float: left;
+	font-size: 1.6rem;
+	line-height: 2.1rem;
+	padding: 0 2rem;
+	box-sizing: content-box;
+}
+.course p{
+	position: relative;
+	font-family: serif;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	box-sizing: content-box;
+	word-break: break-all;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.course span.title{
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+.news{
+	position: relative;
+	float: right;
+	display: inline-block;
+	height: auto;
+	max-width: 23%;
+	overflow: auto;
+	height: 550px;
+	z-index: 100;
+	width: 149px;
+	/* position: sticky; */
+}
+.news ul{
+	list-style: none;
+	padding: 0;
+}
+.news ul li{
+	width: 95%;
+	min-height: 4rem;
+	border: solid 1px #ddd;
+	background-color: white;
+	text-align: middle;
+}
+.news ul li:first-child{
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
+.news ul li:last-child{
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+.news ul li span{
+	display: inline-block;
+	height: 2rem;
+	margin-top: 1rem;
+	position: relative;
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+	padding: 0 2rem;
+	box-sizing: content-box;
+	overflow: hidden;
+	color: black;
+}
+.news ul li span a{
+	text-decoration: none;
+	width: auto;
+	color: #777777;
+	outline: none;
+}
+.news ul li span.news-title:hover{
+	color: #1c99d1;
+}
+.news ul li span a:visited{
+	color: black;
+}
+.news ul li span.num{
+	background-color: #777;
+	min-width: 1rem;
+	border-radius: 1rem;
+	padding: 0 0.5rem;
+	margin-right: 1rem;
+}
+.intr{
+	width: 70%;
+	position: relative;
+	float: right;
+	padding-top: 50px;
+	padding-left: 5%;
+	padding-right: 5%;
+	z-index: 1;
+}
+.clear{
+	clear: both;
+}
+
+.project{
+	position: relative;
+	width: 100%;
+	margin-bottom: 2rem;
+	background-color: #CCCCCC;
+}
+.project .side-fixed{
+	position: relative;
+	min-width: 0;
+	height: auto;
+	float: left;
+	background-color: rgba(51, 102, 255, 1);
+	margin-bottom: 1rem;
+}
+.project img{
+	display: block;
+	width: 36rem;
+	height: 25rem;
+}
+.proimg .back-img-hover{
+	display: block;
+	width: 36rem;
+	height: 25rem;
+	background-color: rgb(0,0,0);
+	position: relative;
+	opacity: 0;
+	top: -25rem;
+}
+.img-group{
+	display: block;
+	width: auto;
+	height: auto;
+	position: relative;
+	right: 2rem;
+	top: -2.5rem;
+}
+.img-group .proimg{
+	/* display: inherit; */
+	float: left;
+	padding-left: 10%;
+	padding-top: 6rem;
+	border: white;
+	border-width: 4rem;
+	display: block;
+	width: 100%;
+	height: 28rem;
+	/* overflow: hidden; */
+}
+.intr-project{
+	padding: 2rem 0.5rem;
+	font-family: 'Arial Normal';
+}
+.project .intr-project span{
+	font-size: 1.7rem;
+	font-weight: bolder;
+	margin-left: 5%;
+}
+.project .intr-project p{
+	display: block;
+	width: 90%;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	margin-left: 4%;
+	word-break: break-all;
+}
+.contact{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 30rem;
+	background-color: rgba(39, 68, 114, 1);
+	text-align: center;
+	color: white;
+	font-family: 'Arial Normal';
+	font-size: 1.6rem;
+}
+footer{
+	position: relative;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+.title-contact{
+	padding: 3rem 0 0 0;
+	width: auto;
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 600;
+	line-height: 2.5rem;
+	font-size: 2.6rem;
+}
+.contact .line-con{
+	width: 100%;
+	display: block;
+}
+.contact .line{
+	height: 1rem;
+	width: 20rem;
+	margin: 1rem auto 0;
+	border-bottom: solid grey 1px;
+}
+.intr-contact{
+	display: block;
+	width: 100%;
+	margin: 3rem 0 auto;
+}
+.intr-contact p{
+	display: block;
+	width: 35rem;
+	margin: 0 auto;
+	font-size: 1.3rem;
+	word-wrap: break-word;
+	line-height: 1.9rem;
+}
+.primary_button{
+	width: 100%;
+	display: block;
+	margin-top: 3rem;
+}
+.primary_button .text{
+	width: 20rem;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	background-color: rgba(22, 155, 213, 1);
+	border-radius: 1rem;
+	line-height: 4rem;
+	cursor: pointer;
+}
+.contact-visible{
+	display: block;
+	width: 100%;
+	height: 229rem;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	bottom: 0;
+	visibility: visible;
+}
+.contact-visible .input-container{
+	display: block;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 170rem;
+}
+.contact-visible .input-container .text_field{
+	display: block;
+	width: auto;
+	height: auto;
+}
+.contact-visible .input-container .text_field input{
+	height: 4rem;
+	display: block;
+	width: 60rem;
+	margin: 2rem auto;
+}
+.contact-visible .input-container .text_field textarea{
+	height: 25rem;
+	width: 60rem;
+	resize: none;
+}
+.send2{
+	margin-top: 5rem;
+}
+.close{
+	display: block;
+	position: absolute;
+	top: 160rem;
+	width: 100%;
+}
+.close .primary_button{
+	display: block;
+	background: rgba(22, 155, 213, 1);
+	width: 4rem;
+	height: 4rem;
+	border-radius: 1rem;
+	position: absolute;
+	margin: 0 auto;
+	left: 48%;
+}
+.close .contact-icon img{
+	margin: 1rem;
+	display: block;
+}
+.hidden-tip{
+	display: block;
+	position: absolute;
+	top: 2rem;
+	width: 100%;
+	height: auto;
+}
+.hidden-tip div{
+	display: block;
+	width: 15rem;
+	height: 3rem;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(200,200,200,0.6);
+	font-size: 1.8rem;
+	font-weight: 600;
+	font-family: 'Arial Normal';
+	border-radius: 0.5rem;
+	margin: 0 auto;
+}
+
+.nextvideo{
+	color: white;
+}
+
+h3{
+	font-size: 24px;
+	font-family: monospace;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#couvideo > hr{
+	height: 3px;
+	border: none;
+	border-top: 3px double #4a89dc;
+	margin: 23px;
+}
+
+
+#example_video_1{
+	margin-left: 18%;
+}
+
+@media (max-width: 1200px) {
+	.intr{
+		width: 90%;
+	}
+	.jquery-accordion-menu {
+		width: 100%;
+	}
+	.jquery-accordion-menu-con{
+		position: relative;
+		width: 90%;
+		float: none;
+	}
+}

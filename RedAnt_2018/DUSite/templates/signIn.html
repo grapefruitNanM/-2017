@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- [if lt IE 9]><script src="js/html5.js"></script><![endif] -->
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/static/js/jquery.tiles.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/jquery.tiles.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/wheel.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/cornerTop.css">
+  </head>
+    <body>
+        {% include 'topBar.html' %}
+        <!-- 轮播图片 -->
+        <div id="wheel-container" class="wheel-container">
+            <div class="bac-lim">
+            <div id="wheel" class="wheel">
+                <div id="photo" class="photo">
+                    <div id="pre" class="pre">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                    {% for poster in posters %}
+                        <img src=/media/{{ poster.fileField }} alt="轮播图片">
+                    {% endfor %}
+                    <div id="after" class="after">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div id="wheel-spot" class="wheel-spot">
+                    {% for poster in posters %}
+                        <div class="spot"></div>
+                    {% endfor %}
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="limit">
+        <!-- Project -->
+        <div class="project">
+            <div class="intr">
+                <div class="side-fixed">
+                    <div class="intr-project">
+                        <span>{{ introduction.Name }}</span>
+                        <p>
+                            {% autoescape off %}
+                                {{ introduction.Content }}
+                            {% endautoescape %}
+                        </p>
+                    </div>
+                </div>
+                <div class="img-group">
+                    {% for team in teams %}
+                        {% if team.OutofTime is False%}
+                            <div class="proimg" id="proimg">
+                                <div>
+                                    <img src=/media/{{ team.GroupPhoto }}>
+                                    <div class="back-img-hover" id="back-img-hove">
+                                        <div  class="hover-eff">
+                                            <h2>{{ team.TeamName }}</h2>
+                                            <p>
+                                                {% autoescape off %}
+                                                    {{ team.Introduction }}
+                                                {% endautoescape %}
+                                             </p>
+                                            <a href="/teams/major={{ team.id }}/">了解更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        </div>
+        <div id="contact" class="contact">
+            <div class="title-contact">联系我们</div>
+            <div class="line-con"><div class="line"></div></div>
+            <div class="intr-contact">
+                <p>
+                {% autoescape off %}
+                        <span class="edit-target">{{ contact.Content }}</span>
+                {% endautoescape %}
+                </p>
+            </div>
+            <!-- <div id="u189" class="ax_default primary_button">
+                <div id="u190" class="text" style="visibility: visible;">
+                  <p id="contactUs"><span>给我们发邮件</span></p>
+                </div>
+            </div> -->
+            <div class="send-email">
+                <form id="send-email">
+                    <div class="body-line">
+                        <input id="from-mail" type="text" placeholder="请填写你的邮箱" onchange="checkFromMail(this)" />
+                        <i class="check fa fa-check" id="check-from-mail"></i>
+                    </div>
+                    <div class="body-line">
+                        <input id="from-name" type="text" placeholder="填写你的真实姓名"/>
+                        <!-- <i class="check fa fa-check" id="check-psw"></i> -->
+                    </div>
+                    <div class="body-line">
+                        <textarea id="from-content" type="text" placeholder="写下你的疑问或心声！"></textarea>
+                        <!-- <i class="check fa fa-check" id="check-psw"></i> -->
+                    </div>
+                    <input type="submit" name="send" value="发 送" id="send">
+                </form>
+            </div>
+        </div>
+        <div class="model-alertInfo" id="model-alertInfo">
+            <div class="model-container">
+                <div class="model-head">
+                    <span class="model-title">联系我们</span>
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="model-body">
+                    <h3 class="message"></h3>
+                </div>
+                <div class="model-end">
+                    <div class="btn get">确 认</div>
+                    <!-- <div class="btn shut">关 闭</div> -->
+                </div>
+            </div>
+        </div>
+        <div class="corner-top">
+            <button class="CornerButton" onclick="backTotop()" aria-lable="回到顶部" type="button" data-tooltip="回到顶部" data-tooltip-position="left" id="CornerButton">
+              <svg title="回到顶部" class="Backtotop" FILL="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M 16.036 19.59 a 1 1 0 0 1 -0.997 0.995 H 9.032 a 0.996 0.996 0 0 1 -0.997 -0.996 v -7.005 H 5.03 c -1.1 0 -1.36 -0.633 -0.578 -1.416 L 11.33 4.29 a 1.003 1.003 0 0 1 1.412 0 l 6.878 6.88 c 0.782 0.78 0.523 1.415 -0.58 1.415 h -3.004 v 7.005 Z">
+                </path>
+              </svg>
+            </button>
+         </div>
+    <script type="text/javascript" src="/static/js/signIn.js"></script>
+    <script type="text/javascript" src="/static/js/contact.js"></script>
+    <script type="text/javascript" src="/static/js/wheel.js"></script>
+    <script type="text/javascript" src="/static/js/news.js"></script>
+    <script type="text/javascript" src="/static/js/alertModel.js"></script>
+    <script type="text/javascript" src="/static/js/backTop.js"></script>
+        <footer>
+            <div>
+                <hr>
+                  <p> Copyright 红蚂蚁实验室</p>
+                <hr>
+            </div>
+        </footer>
+    </body>
+</html>

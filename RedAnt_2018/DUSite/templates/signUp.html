@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/signUp.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="/static/js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<script>
+	    window.onload=function(){
+	    	var i=document.getElementsByTagName('input').length;
+	    	for(var n=0;n<i;n++){
+	    		if(document.getElementsByTagName('input')[n].className!="sign-up-btn"){
+	    			document.getElementsByTagName('input')[n].value='';
+	    		}
+	    	}
+	    }
+	</script>
+	<!-- <header class="sign-up-header"><a href="/index/">返回</a></header> -->
+	<div id="sign-up-container" class="sign-up-container">
+		<div id="sign-up-title">用户注册</div>
+		<form id="sign-up" class="sign-up" method="post" style="vertical-align: middle;">
+			<div id="sign-up-mail" class="sign-up-mail show">
+				<span><span class="must">* </span>邮箱：</span>
+				<input id='mail' type="text" name="mail" placeholder="请输入注册邮箱" onchange="checkMail(this)" onfocus="showHint(this)" onblur="hideHint(this)">
+				<i class="fa check"></i>
+				<span class="hint"><i class="fa fa-exclamation-circle" id="tip"></i><span id="hint-mail"></span></span>
+			</div>
+
+			<div id="sign-up-name" class="sign-up-name show">
+				<span><span class="must">* </span>用户名：</span>
+				<input id="name" type="text" name="name" placeholder="请输入用户名" maxlength="10" minlength="2" onchange="checkAccount(this)" onfocus="showHint(this)" onblur="hideHint(this)">
+				<i class="fa check"></i>
+				<span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-name"></span></span>
+			</div>
+
+			<div id="sign-up-psw" class="sign-up-password show">
+				<span><span class="must">* </span>密码：</span>
+				<input id="psw" type="password" name="password" placeholder="请输入密码" maxlength="20" minlength="6" onchange="checkPsw(this)" onfocus="showHint(this)" onblur="hideHint(this)" >
+				<i class="fa check"></i>
+				<span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-password"></span></span>
+			</div>
+
+			<div id="confirm-psw" class="sign-up-password show check-psw">
+				<span><span class="must">* </span>确认密码：</span>
+				<input id="cf-psw" type="password" name="confirm-password" placeholder="请再次输入密码" maxlength="20" minlength="6" onchange="confirmPsw(this)" onfocus="showHint(this)"  onblur="hideHint(this)">
+				<i class="fa check"></i>
+				<span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-confirm-password"></span></span>
+			</div>
+			<div id="project" class="project show">
+				<span><span class="must">* </span>组别：</span>
+				<select name="proGroup" id='proGroup' onchange="checkPro(this)">
+					<option value="----" selected="selected">----</option>
+					<option value="研究生">研究生</option>
+                    {% for team in teams %}
+                        {% if team.OutofTime is False%}
+                            <option value="{{ team.TeamName }}">{{ team.TeamName }}</option>
+                        {% endif %}
+                    {% endfor %}
+
+				</select>
+				<i class="fa check"></i>
+				<!--<span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-proGroup"></span></span> -->
+			</div>
+			<div id="invitation" class="sign-up-inv show">
+				<span><span class="must">* </span>邀请码：</span>
+				<input id="invcode" type="text" name="invcode" placeholder="请输入邀请码" maxlength="20" minlength="6" onfocus="showHint(this)"  onblur="hideHint(this)" onchange="checkInv(this)">
+				<i class="fa check"></i>
+				<span class="hint"><i class="fa fa-exclamation-circle"></i><span id="hint-invcode"></span></span>
+			</div>
+			<!-- <fieldset>
+				<input type="checkbox" id="showPwd">
+	            <label for="showPwd">显示密码</label>
+        	</fieldset> -->
+        	<div class="buttons">
+				<input type="submit" href="/index/" name="提交" value="注册" id="sign-up-btn" class="sign-up-btn">
+				<div class="btn go-back">
+					<a href="/index/">返回</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="model-alertInfo" id="model-alertInfo">
+        <div class="model-container">
+            <div class="model-head">
+                <span class="model-title">注册</span>
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="model-body">
+                <h3 class="message"></h3>
+            </div>
+            <div class="model-end">
+            	<div class="btn get">确 认</div>
+                <!-- <div class="btn shut">关 闭</div> -->
+            </div>
+        </div>
+    </div>
+	<footer>
+        <div>
+            <hr>
+              <p> Copyright 红蚂蚁实验室</p>
+            <hr>
+        </div>
+    </footer>
+	<script type="text/javascript" src="/static/js/signUp.js"></script>
+	<script type="text/javascript" src="/static/js/alertModel.js"></script>
+</body>
+</html>

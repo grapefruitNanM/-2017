@@ -1,0 +1,19 @@
+footer {
+    text-align: center;
+	background:#274472;
+	border-radius:0 0 4px 4px;
+}
+
+footer p {
+    margin: 0;
+    color: #999;
+    font-size: 16px;
+}
+
+#footHr,footer > div > hr{
+    background: #EEE;
+    border: 0;
+    height: 1px;
+    margin: 3vh 0 3vh;
+    display: inline-block;
+}

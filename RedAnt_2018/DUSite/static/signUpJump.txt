@@ -1,0 +1,1 @@
+<div class="response" style="vertical-align:middle;text-align:center;font-size:2rem;color:#fff;line-height:30rem">Sign Up success!!</div>

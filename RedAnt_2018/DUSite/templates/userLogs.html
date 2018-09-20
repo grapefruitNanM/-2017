@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户管理</title>
+    <meta charset="utf-8">
+    <meta>
+    <link rel="stylesheet" type="text/css" href="/static/css/personalCenter.css">
+    <link rel="stylesheet" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/manager.css">
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/alertModel.css">
+</head>
+<body>
+    {% include 'topBar.html' %}
+        <div class="main-container" id="main">
+            <div class="vacant left"></div>
+            <!-- <div class="vacant right"></div> -->
+            <div class="sidebar">
+                <div class="rw-nav-title"></div>
+                <div class="reverse-nav">
+                    <ul>
+                        <li class="leaf "><a href="/manage/">普通用户 </a>
+                        </li>
+                        <li class="leaf"><a href="/manage/powerUser/">高级用户 </a>
+                        </li>
+                        <li class="leaf thisleaf"><a href="/manage/log/">用户日志 </a>
+                        </li>
+                        <li class="leaf"><a href="/manage/invitation/">邀请码 </a>
+                        </li>
+                        <li class="leaf"><a href="/manage/changeMail/">消息</a> <a class="newMailNum" href="">12</a></li>
+                    </ul>
+                </div>
+            </div><!--该注释行用于解决inline-block的间距问题
+         --><div class="manager">
+                <div class="prim-list">
+                    {% for log in logs %}
+                        <div class="logs"><p>{{ log.Time }} {{ log.User }}{{ log.Content }}</p></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="model-alertInfo" id="model-alertInfo">
+            <div class="model-container">
+                <div class="model-head">
+                    <span class="model-title">用户管理</span>
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="model-body">
+                    <h3 class="message"></h3>
+                </div>
+                <div class="model-end">
+                    <div class="btn get">确 认</div>
+                    <!-- <div class="btn shut">关 闭</div> -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <hr>
+                  <p> Copyright 红蚂蚁实验室</p>
+                <hr>
+            </div>
+        </footer>
+</body>
+<script type="text/javascript" src="/static/js/manager.js"></script>
+<script type="text/javascript" src="/static/js/alertModel.js"></script>
+</html>

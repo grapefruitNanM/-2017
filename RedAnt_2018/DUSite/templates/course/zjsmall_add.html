@@ -1,0 +1,86 @@
+<style>
+    #submit{width: 60px;border-radius: 5px; background-color: deepskyblue;border: none; color: white; height: 30px;}
+</style>
+<div class="main-container" >
+    <div style="margin-left: 25%;">
+        <form action="/courses/zhangjie_small_add" enctype="multipart/form-data" method="post" style="border: 1px solid #ddd;margin:5%; padding: 10px; margin-top: 50px;">
+            <table>
+                <colsgroup>
+                    <col style="width: 120px;">
+                    <col style="min-width: 400px;">
+                </colsgroup>
+                <tr >
+                    <td>
+                        
+                    </td>
+                    <td>
+                        {% if zjsmall %}
+                            {{ zj }} - {{ zjsmall }} - 修改
+                        <input type="hidden" name="zjs_id" value="{{ zjs_id }}">
+                        {% else %}
+                            {{ zj }} - 添加子章节
+                        {% endif %}
+                        <input type="hidden" name="kecheng" value="{{ kecheng }}">
+                        <input type="hidden" name="zj" value="{{ zj }}">
+                    </td>
+                </tr>
+            {% if not type_ %}
+                <tr >
+                    <td>
+                        <span>章节名</span>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name" placeholder="请输入章节名" value="默认章节名" style="width: 100%;">
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td><span style="color: red">注意</span></td>
+                    <td><span style="color: red">文件不上传则不会进行删除修改</span></td>
+                </tr>
+            {% endif %}
+            {% if not type_ or type_ == 'video' %}
+                <tr >
+                    <td>
+                        <span>章节视频</span>
+                    </td>
+                    <td>
+                        <input type="file" name="video" style="font-size: 14px;">
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <span>视频描述</span>
+                    </td>
+                    <td>
+                        <textarea name="video_desc" id="" style="width: 100%" rows="10">{{ zjsmall.video_desc }}</textarea>
+                    </td>
+                </tr>
+            {% endif %}
+            {% if not type_ or type_ == 'content' %}
+                <tr >
+                    <td>
+                        <span>章节内容</span>
+                    </td>
+                    <td>
+                        <textarea name="content" id="" style="width: 100%" rows="10">{{ zjsmall.content }}</textarea>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <span>图片课件</span>
+                    </td>
+                    <td>
+                        <input type="file" name="pics" multiple="multiple" value="可以选择多个文件">
+                    </td>
+                </tr>
+            {% endif %}
+                <tr>
+                    
+                </tr>
+            </table>
+            <br>
+            <button id="submit" type="submit" style="position: relative;left: 50%;" onclick="alertInfoWithJump0('正在进行提交，请勿关闭页面，否则将提交失败')">提交</button>
+        </form>
+    </div>
+</div>
